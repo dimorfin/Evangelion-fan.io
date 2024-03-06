@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evangelion</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1f1f1f;
+            color: #fff;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .content {
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .content h2 {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+        .content p {
+            line-height: 1.6;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .netflix-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .netflix-link a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .netflix-link a:hover {
+            color: #999;
+        }
+        .facts {
+            margin-top: 20px;
+        }
+        .facts h5 {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+        .facts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .facts li {
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Language switcher styles */
+        .language-switcher {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .language-switcher button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-switcher button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body data-lang="en">
+
+<header>
+    <h1 id="title">Neon Genesis Evangelion (fan site)</h1>
+    <p id="series">Anime Series</p>
+</header>
+
+<!-- Language switcher -->
+<div class="language-switcher">
+    <button data-lang="en" onclick="changeLanguage('en')">English</button>
+    <button data-lang="ua" onclick="changeLanguage('ua')">Українська</button>
+</div>
+
+<div class="container">
+    <div class="content">
+        <h2 id="about-title">About Evangelion</h2>
+        <p id="about-text">Neon Genesis Evangelion is a Japanese mecha anime television series produced by Gainax and Tatsunoko Production. It was directed by Hideaki Anno and aired on TV Tokyo from October 1995 to March 1996. The story takes place in the futuristic "Tokyo-3" fifteen years after a global cataclysm.</p>
+        <p id="about-pilot">The series follows Shinji Ikari, a teenage boy whom the shadowy organization NERV recruits to pilot a giant bio-machine called an "Evangelion" to protect the city of Tokyo-3 from mysterious beings known as Angels.</p>
+        <p id="about-depth">Evangelion is known for its psychological depth, religious symbolism, and complex storytelling, and it has had a significant impact on both anime and popular culture.</p>
+        <h3 id="anime-illustrations">Illustrations from the anime</h3>
+        <div class="gallery">
+            <img src="https://pbs.twimg.com/media/E8rkBvlWQAcy1tr.jpg:large" alt="Evangelion 1">
+            <img src="https://animeuknews.net/app/uploads/2021/08/Evangelion-3.01.01-Amazon-Prime-Video-Poster-1.jpg" alt="Evangelion 2">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjU0MzQwMmMtMWU3OS00MDc0LWIzOTItZmE1MjZlYmExMGJiXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_.jpg" alt="Evangelion 3">
+        </div>
+        <h2 id="netflix-title">Watch Anime on Netflix</h2>
+        <div class="netflix-link">
+            <p><a href="https://www.netflix.com/title/81033445" target="_blank" id="netflix-link-text">Watch Neon Genesis Evangelion on Netflix</a></p>
+        </div>
+        <div class="facts">
+            <h5 id="additional-facts">Additional Facts</h5>
+            <ul>
+                <li id="fact-1">Neon Genesis Evangelion was created by Hideaki Anno, who drew inspiration from his struggles with depression and existential questions.</li>
+                <li id="fact-2">The series is known for its complex characters, intricate plot, and exploration of philosophical themes such as the nature of humanity and identity.</li>
+                <li id="fact-3">Evangelion has spawned numerous additional manga, films, video games, and merchandise, making it one of the most influential anime franchises of all time.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Neon Genesis Evangelion Fan Site</p>
+</footer>
+
+<script>
+    function changeLanguage(language) {
+        document.body.setAttribute('data-lang', language);
+        
+        if (language === 'ua') {
+            // Ukrainian translations
+            document.getElementById('title').textContent = 'Неоновий Генезис Євангеліон (фан-сайт)';
+            document.getElementById('series').textContent = 'Серіал аніме';
+            document.getElementById('about-title').textContent = 'Про Євангеліон';
+            document.getElementById('about-text').textContent = 'Неоновий Генезис Євангеліон - це японський меха-аніме телевізійний серіал, вироблений Gainax і Tatsunoko Production. Режисером його був Хідеакі Анно, а показувався на TV Tokyo з жовтня 1995 року по березень 1996 року. Дія розгортається у футуристичному "Токіо-3" після глобального катастрофи.';
+            document.getElementById('about-pilot').textContent = 'Серіал розповідає про Шіндзі Ікарі, підлітка, якого таємна організація NERV залучає пілотувати гігантську біомашину, відому як "Євангеліон", щоб захистити місто Токіо-3 від таємничих істот, відомих як Ангели.';
+            document.getElementById('about-depth').textContent = 'Євангеліон відомий своєю психологічною глибиною, релігійною символікою та складним сюжетом, і він мав значний вплив як на аніме, так і на популярну культуру.';
+            document.getElementById('anime-illustrations').textContent = 'Ілюстрації з аніме';
+            document.getElementById('netflix-title').textContent = 'Дивіться аніме на Netflix';
+            document.getElementById('netflix-link-text').textContent = 'Дивіться Neon Genesis Evangelion на Netflix';
+            document.getElementById('additional-facts').textContent = 'Додаткові факти';
+            document.getElementById('fact-1').textContent = 'Неоновий Генезис Євангеліон був створений Хідеакі Анно, який брав натхнення зі своїх боротьб з депресією та екзистенційними питаннями.';
+            document.getElementById('fact-2').textContent = 'Серіал відомий своїми складними персонажами, заплутаним сюжетом і дослідженням філософських тем, таких як природа людства та ідентичність.';
+            document.getElementById('fact-3').textContent = 'Євангеліон породив численні додаткові манги, фільми, відеоігри та товари, що зробило його однією з найвпливовіших аніме-франшиз усіх часів.';
+        } else {
+            // English translations
+            document.getElementById('title').textContent = 'Neon Genesis Evangelion (fan site)';
+            document.getElementById('series').textContent = 'Anime Series';
+            document.getElementById('about-title').textContent = 'About Evangelion';
+            document.getElementById('about-text').textContent = 'Neon Genesis Evangelion is a Japanese mecha anime television series produced by Gainax and Tatsunoko Production. It was directed by Hideaki Anno and aired on TV Tokyo from October 1995 to March 1996. The story takes place in the futuristic "Tokyo-3" fifteen years after a global cataclysm.';
+            document.getElementById('about-pilot').textContent = 'The series follows Shinji Ikari, a teenage boy whom the shadowy organization NERV recruits to pilot a giant bio-machine called an "Evangelion" to protect the city of Tokyo-3 from mysterious beings known as Angels.';
+            document.getElementById('about-depth').textContent = 'Evangelion is known for its psychological depth, religious symbolism, and complex storytelling, and it has had a significant impact on both anime and popular culture.';
+            document.getElementById('anime-illustrations').textContent = 'Illustrations from the anime';
+            document.getElementById('netflix-title').textContent = 'Watch Anime on Netflix';
+            document.getElementById('netflix-link-text').textContent = 'Watch Neon Genesis Evangelion on Netflix';
+            document.getElementById('additional-facts').textContent = 'Additional Facts';
+            document.getElementById('fact-1').textContent = 'Neon Genesis Evangelion was created by Hideaki Anno, who drew inspiration from his struggles with depression and existential questions.';
+            document.getElementById('fact-2').textContent = 'The series is known for its complex characters, intricate plot, and exploration of philosophical themes such as the nature of humanity and identity.';
+            document.getElementById('fact-3').textContent = 'Evangelion has spawned numerous additional manga, films, video games, and merchandise, making it one of the most influential anime franchises of all time.';
+        }
+    }
+</script>
+
+</body>
+</html>
